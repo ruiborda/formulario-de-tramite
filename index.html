@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+	<!-- Bootstrap CSS -->
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet" />
+	<title>
+		Formulario de tramite y llenado automático de DNI y RUC
+	</title>
+</head>
+</html>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col shadow">
+			<form>
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label for="tipoPersona">
+							Tipo de persona
+						</label>
+						<select class="custom-select is-invalid" id="tipoPersona" required="">
+							<option value="">
+								seleccionar
+							</option>
+							<option value="1">
+								Persona natural
+							</option>
+							<option value="2">
+								Empresa
+							</option>
+						</select>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Please choose a persona.
+						</div>
+					</div>
+					<div class="form-group col-md-2 personaNatural">
+						<label for="dni">
+							Numero dni
+						</label>
+						<input class="form-control is-invalid" data-inputmask="'mask': '99999999'" id="dni" type="text" />
+						<div class="valid-feedback">
+							muy bien
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su dni
+						</div>
+					</div>
+					<div class="form-group col-md-6 personaNatural">
+						<label for="nombresApellidos">
+							Nombres y apellidos
+						</label>
+						<input class="form-control is-invalid" id="nombresApellidos" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su nombre y apellido
+						</div>
+					</div>
+					<div class="form-group col-md-2 empresaInput d-none">
+						<label for="ruc">
+							RUC
+						</label>
+						<input class="form-control is-invalid" data-inputmask="'mask': '99999999999'" id="ruc" type="text" />
+						<div class="valid-feedback">
+							muy bien
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su dni
+						</div>
+					</div>
+					<div class="form-group col-md-6 empresaInput d-none">
+						<label for="nombresApellidos">
+							Nombre Comercial
+						</label>
+						<input class="form-control is-invalid" id="nombreComercial" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su nombre y apellido
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-2">
+						<label for="celular">
+							Numero de telefono
+						</label>
+						<input class="form-control is-invalid" data-inputmask="'mask': '+51 999 999 999'" id="celular" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su numero
+						</div>
+					</div>
+					<div class="form-group col-md-5">
+						<label for="correo">
+							correo
+						</label>
+						<input class="form-control is-invalid" data-inputmask="'alias': 'email'" id="correo" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su correo
+						</div>
+					</div>
+					<div class="form-group col-md-5">
+						<label for="direccion">
+							direccion
+						</label>
+						<input class="form-control is-invalid" id="direccion" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su direccion
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="tipoDocumento">
+							Tipo de documento
+						</label>
+						<select class="custom-select is-invalid" id="tipoDocumento" required="">
+							<option value="">
+								seleccionar
+							</option>
+							<option value="1">
+								doc 1
+							</option>
+						</select>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Please choose a type
+						</div>
+					</div>
+					<div class="form-group col-md-3">
+						<label for="numeroDocumento">
+							Nro Documento
+						</label>
+						<input class="form-control is-invalid" id="numeroDocumento" required="" type="text" />
+						<div class="valid-feedback">
+							muy bien
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su dni
+						</div>
+					</div>
+					<div class="form-group col-md-3">
+						<label for="numeroFolios">
+							Nro Folios
+						</label>
+						<input class="form-control is-invalid" id="numeroFolios" required="" type="text" />
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Por favor ingrese su nombre y apellido
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-12">
+						<div>
+							<label for="asunto">
+								Asunto
+							</label>
+							<textarea class="form-control is-invalid" id="asunto" placeholder="Required example textarea" required="">
+                                </textarea>
+							<div class="invalid-feedback">
+								Please enter a message in the textarea.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-12">
+						<label for="archivo">
+							Archivo
+						</label>
+						<div class="custom-file mb-3">
+							<input class="custom-file-input is-invalid" id="archivo" lang="es" required="" type="file" />
+							<label class="custom-file-label" for="archivo">
+								Choose file...
+							</label>
+							<div class="invalid-feedback">
+								Example invalid custom file feedback
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary" type="submit">
+					Sign in
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/inputmask/dist/jquery.inputmask.min.js"></script>
+<script src="script.js"></script>
+<script>
+	$("#validationTextarea").html("");
+	$(document).ready(function () {
+		$(":input").inputmask();
+	})
+	$("#asunto").html("");
+</script>
+</body>
